@@ -28,14 +28,18 @@ class todoservice{
         // Populating the existing list using the concat 
         this.todos=this.todos.todo.concat(todo);
         // Displaying the feedback message along with the new list after addition
-        console.log("Added new item to the list successfully.", this.todos)
+        console.log("Added new item to the list successfully.")
         console.log(this.todos); 
-        return this.todos
     }
 
     delete_todo(id){
-        // Your code here
+        id="FALL 2022."
+        // Deleting the item having the description FALL 2022 from the list.  
+        this.todos = this.todos.filter(todo => todo.description !== id)
+        console.log("The to-do list after deletion.")
+        console.log(this.todos);
     }
+
 
     update_todo(id, todo){
         // Your code here

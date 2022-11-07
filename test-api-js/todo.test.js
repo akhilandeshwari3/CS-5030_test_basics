@@ -38,5 +38,10 @@ describe('todo test suite', () => {
         expect(todo_service.get_todos().length).toEqual(4);
     });
 
+    // Checking the length of the list after deleting is -1 less than previous list
+    test("delete_todo", () => { 
+        todo_service.delete_todo("");
+        expect(todo_service.get_todos().length).toEqual(3);
+    });
 
 });
