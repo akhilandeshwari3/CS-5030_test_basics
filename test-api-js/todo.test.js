@@ -22,6 +22,21 @@ describe('todo test suite', () => {
     
 
     // Write all your test cases here that corresponds to software requirements
+    test("add_todo", () => {
+        todo={
+            "title": "T4",
+            "description": "READY FOR SPRING-23?",
+            "done": false
+        }
+        todo_service.add_todo(todo);
+        expect(todo_service.get_todos().length).toEqual(4);
+    });
+
+
+    // Checking the length of the list after addition is 4
+    test("add_todo", () => {
+        expect(todo_service.get_todos().length).toEqual(4);
+    });
 
 
 });
