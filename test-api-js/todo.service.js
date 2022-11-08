@@ -42,7 +42,12 @@ class todoservice{
 
 
     update_todo(id, todo){
-        // Your code here
+        // Updating the description in the list using the id
+        this.todos.map(todo_update => {
+            if (todo_update.title === id) {todo_update.description = todo;}  
+        })
+        console.log("The to-do list after Updation.")
+        console.log(this.todos);
     }
 }
 

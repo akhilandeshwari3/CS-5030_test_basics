@@ -44,4 +44,10 @@ describe('todo test suite', () => {
         expect(todo_service.get_todos().length).toEqual(3);
     });
 
+    // Checking the updated item in the list
+    test("update_todo", () => {
+        todo_service.update_todo("T1","START..");
+    expect(todo_service.get_todos().filter(tmp=>tmp.description==="START...").length).toEqual(0);
+    });
+
 });
