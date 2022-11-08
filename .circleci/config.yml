@@ -15,7 +15,8 @@ jobs:
       - run:
           name: current directory
           command: pwd
-  build-and-test-javascript:
+  
+  build-and-test-api-js:
      
      docker:
        - image: cimg/node:14.20.0
@@ -37,4 +38,4 @@ workflows:
             branches:
               only:
                 - master
-      - build-and-test-javascript
+      - build-and-test-api-js
